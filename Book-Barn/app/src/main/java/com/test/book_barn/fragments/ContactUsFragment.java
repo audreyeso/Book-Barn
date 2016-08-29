@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.test.sql.R;
+import com.test.book_barn.R;
 
 /**
  * Created by audreyeso on 8/22/16.
