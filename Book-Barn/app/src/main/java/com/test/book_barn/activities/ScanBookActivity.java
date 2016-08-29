@@ -17,13 +17,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.client.android.CaptureActivity;
-import com.test.sql.R;
-import com.test.sql.adapters.CustomCursorAdapterBooks;
-import com.test.sql.googleApiModels.Example;
-import com.test.sql.helpers.ClassroomOpenHelper;
-import com.test.sql.interfaces.GoogleBooksAPI;
-import com.test.sql.models.Book;
-import com.test.sql.models.Student;
+import com.test.book_barn.adapters.CustomCursorAdapterBooks;
+import com.test.book_barn.googleApiModels.Example;
+import com.test.book_barn.helpers.ClassroomOpenHelper;
+import com.test.book_barn.interfaces.GoogleBooksAPI;
+import com.test.book_barn.models.Book;
+import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
 

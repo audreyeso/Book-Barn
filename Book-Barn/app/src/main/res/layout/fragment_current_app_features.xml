@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:paddingTop="60dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:textSize="35dp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="sans-serif-condensed"
+            android:text="How To Use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="For Teachers"
+            android:textSize="21dp"
+            />
+
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="1. Create a classroom."
+            android:textSize="15dp"
+            />
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="2. Add your students."
+            android:textSize="15dp"
+            />
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="3. Check out what your students are reading!"
+            android:textSize="15dp"
+            />
+
+        <ImageView
+            android:paddingTop="45dp"
+            android:layout_gravity="center"
+            android:src="@drawable/dog"
+            android:layout_width="523dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.43" />
+
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="For Students"
+            android:textSize="21dp"
+            />
+
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="1. Click on your name or animal."
+            android:textSize="15dp"
+            />
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="2. Scan a book into your bookshelf."
+            android:textSize="15dp"
+            />
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="3.Sketch your favorite part of the story."
+            android:textSize="15dp"
+            />
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="4. Rate your book!"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

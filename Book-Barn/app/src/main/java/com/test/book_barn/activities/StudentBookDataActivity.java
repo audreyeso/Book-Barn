@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import com.test.sql.R;
-import com.test.sql.adapters.CustomCursorAdapterStudentData;
-import com.test.sql.helpers.ClassroomOpenHelper;
-import com.test.sql.models.Classroom;
-import com.test.sql.models.Student;
+import com.test.book_barn.adapters.CustomCursorAdapterStudentData;
+import com.test.book_barn.helpers.ClassroomOpenHelper;
+import com.test.book_barn.models.Classroom;
+import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
 

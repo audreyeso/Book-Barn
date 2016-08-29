@@ -24,14 +24,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.test.sql.R;
-import com.test.sql.adapters.CustomCursorAdapterClassrooms;
-import com.test.sql.fragments.AboutUsFragment;
-import com.test.sql.fragments.ContactUsFragment;
-import com.test.sql.fragments.CurrentAppFeaturesFragment;
-import com.test.sql.fragments.InstructionsFragment;
-import com.test.sql.helpers.ClassroomOpenHelper;
-import com.test.sql.models.Classroom;
+import com.test.book_barn.adapters.CustomCursorAdapterClassrooms;
+import com.test.book_barn.fragments.AboutUsFragment;
+import com.test.book_barn.fragments.ContactUsFragment;
+import com.test.book_barn.fragments.CurrentAppFeaturesFragment;
+import com.test.book_barn.fragments.InstructionsFragment;
+import com.test.book_barn.helpers.ClassroomOpenHelper;
+import com.test.book_barn.models.Classroom;
 
 import org.parceler.Parcels;
 

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import com.test.sql.models.Student;
+import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
 

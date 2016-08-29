@@ -10,8 +10,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
 
-import com.test.sql.R;
-import com.test.sql.models.Student;
+import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
 

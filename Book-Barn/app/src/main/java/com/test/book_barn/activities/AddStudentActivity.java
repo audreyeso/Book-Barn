@@ -11,11 +11,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.test.sql.R;
-import com.test.sql.adapters.CustomCursorAdapter;
-import com.test.sql.helpers.ClassroomOpenHelper;
-import com.test.sql.models.Classroom;
-import com.test.sql.models.Student;
+import com.test.book_barn.adapters.CustomCursorAdapter;
+import com.test.book_barn.helpers.ClassroomOpenHelper;
+import com.test.book_barn.models.Classroom;
+import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
 

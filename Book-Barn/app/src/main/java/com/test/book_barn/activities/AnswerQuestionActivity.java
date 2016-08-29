@@ -12,9 +12,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.test.sql.R;
-import com.test.sql.models.Student;
-import com.test.sql.views.DrawingView;
+import com.test.book_barn.models.Student;
+import com.test.book_barn.views.DrawingView;
 
 import org.parceler.Parcels;
 

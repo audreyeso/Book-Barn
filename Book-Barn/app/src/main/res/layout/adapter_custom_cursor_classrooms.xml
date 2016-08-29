@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:padding="16dp"
+    android:paddingLeft="45dp"
+    android:paddingRight="25dp">
+
+    <ImageView
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/adapter_custom_cursor_barn_image"
+        android:layout_width="93dp"
+        android:layout_height="74dp"
+        android:src="@drawable/farmbarn" />
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/adapter_custom_cursor_classroom_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:maxLines="1"
+        android:maxLength="25"
+        android:paddingTop="28dp"
+        android:ellipsize="marquee"
+        android:text="Classroom Name"
+        android:textSize="18dp" />
+
+    <!--<EditText-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:focusable="true"-->
+    <!--android:clickable="true"-->
+    <!--android:id="@+id/adapter_custom_cursor_classroom_name"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:paddingLeft="35dp"-->
+    <!--android:paddingRight="35dp" />-->
+
+
+    <ImageButton
+        android:id="@+id/adapter_custom_cursor_delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_delete_forever_black_24dp" />
+
+</RelativeLayout>
