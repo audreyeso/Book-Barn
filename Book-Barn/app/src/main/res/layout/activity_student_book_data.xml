@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/colorWhite"
-    tools:context="com.test.sql.activities.StudentBookDataActivity">
+    tools:context="com.test.book_barn.activities.AddStudentActivity">
 
     <TextView
         android:textColor="#000000"

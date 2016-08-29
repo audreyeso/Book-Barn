@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    tools:context="com.test.sql.activities.AnswerQuestionActivity">
+    tools:context="com.test.book_barn.activities.AnswerQuestionActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"

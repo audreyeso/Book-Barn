@@ -32,17 +32,6 @@
         android:text="Classroom Name"
         android:textSize="18dp" />
 
-    <!--<EditText-->
-    <!--android:focusableInTouchMode="true"-->
-    <!--android:focusable="true"-->
-    <!--android:clickable="true"-->
-    <!--android:id="@+id/adapter_custom_cursor_classroom_name"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:paddingBottom="10dp"-->
-    <!--android:paddingLeft="35dp"-->
-    <!--android:paddingRight="35dp" />-->
-
 
     <ImageButton
         android:id="@+id/adapter_custom_cursor_delete_button"

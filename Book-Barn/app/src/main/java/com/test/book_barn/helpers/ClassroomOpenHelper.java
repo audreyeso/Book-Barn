@@ -6,9 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.test.sql.models.Book;
-import com.test.sql.models.Classroom;
-import com.test.sql.models.Student;
+import com.test.book_barn.models.Book;
+import com.test.book_barn.models.Classroom;
+import com.test.book_barn.models.Student;
 
 /**
  * Created by audreyeso on 8/18/16.

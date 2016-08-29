@@ -11,8 +11,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.test.sql.R;
-import com.test.sql.helpers.ClassroomOpenHelper;
+import com.test.book_barn.R;
+import com.test.book_barn.helpers.ClassroomOpenHelper;
 
 /**
  * Created by audreyeso on 8/22/16.

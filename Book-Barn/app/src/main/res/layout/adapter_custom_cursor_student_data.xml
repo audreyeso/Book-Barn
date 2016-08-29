@@ -39,18 +39,5 @@
         android:paddingLeft="35dp"
         android:text="# of books"
          />
-
-    <!--<HorizontalScrollView-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_width="wrap_content">-->
-        <!--<view-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--class="im.dacer.androidcharts.BarView"-->
-            <!--android:id="@+id/bar_view" />-->
-    <!--</HorizontalScrollView>-->
-
-
-
 </RelativeLayout>
 
