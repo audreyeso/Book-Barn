@@ -22,7 +22,7 @@
             <item
                 android:id="@+id/nav_contact_us"
                 android:icon="@drawable/ic_contact_mail_black_24dp"
-                android:title="Contact Us Today" />
+                android:title="Contact Us" />
         </menu>
     </item>
 
