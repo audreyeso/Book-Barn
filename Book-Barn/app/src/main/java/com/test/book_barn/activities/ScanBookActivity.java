@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.test.book_barn.R;
 import com.google.zxing.client.android.CaptureActivity;
 import com.test.book_barn.adapters.CustomCursorAdapterBooks;
 import com.test.book_barn.googleApiModels.Example;

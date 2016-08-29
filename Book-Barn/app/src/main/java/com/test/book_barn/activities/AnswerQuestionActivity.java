@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.test.book_barn.R;
 import com.test.book_barn.models.Student;
 import com.test.book_barn.views.DrawingView;
 

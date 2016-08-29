@@ -13,6 +13,7 @@ import android.widget.RatingBar;
 import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
+import com.test.book_barn.R;
 
 /**
  * Users can rate a book.
