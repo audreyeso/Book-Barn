@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/home_button"
-        android:icon="@drawable/smalllogoo"
+        android:icon="@drawable/smalllogo"
         android:title="home"
         app:showAsAction="ifRoom" />
 </menu>
