@@ -17,7 +17,8 @@
         android:textSize="38dp"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/student_book_data_activity_title"
-        android:text="Teacher Dashboard"
+        android:layout_gravity="center"
+        android:text="Student Barnyard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

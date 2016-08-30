@@ -25,7 +25,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="Welcome to Your Barnyard"
+        android:text="@string/welcome_to_your_barnyard"
         android:textSize="22dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -38,7 +38,7 @@
     <TextView
         android:text="@string/select_an_existing_classroom"
         android:layout_gravity="center"
-        android:textSize = "12dp"
+        android:textSize = "15dp"
         android:textColor="#000000"
         android:fontFamily="sans-serif-condensed"
         android:layout_width="wrap_content"

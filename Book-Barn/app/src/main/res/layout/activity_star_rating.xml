@@ -18,7 +18,7 @@
         android:textSize="35dp"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/activity_star_text_view_title"
-        android:text="I rate this book"
+        android:text="I give this book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
