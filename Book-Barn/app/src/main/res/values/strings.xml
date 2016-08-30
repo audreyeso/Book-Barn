@@ -58,4 +58,6 @@
     <string name="draw_your_favorite_part">Draw your favorite part of the story!</string>
     <string name="welcome_to_your_barnyard">Welcome to Your Barnyard</string>
     <string name="enter_student_name">Enter Student Name</string>
+    <string name="i_give_this_book">I give this book</string>
+    <string name="done_large">DONE</string>
 </resources>

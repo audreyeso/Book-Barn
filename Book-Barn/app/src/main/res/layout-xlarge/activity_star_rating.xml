@@ -13,18 +13,20 @@
     android:weightSum="1">
 
     <TextView
-        android:padding="20dp"
+        android:padding="50dp"
         android:layout_gravity="center"
-        android:textSize="35dp"
+        android:textSize="55dp"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/activity_star_text_view_title"
-        android:text="I give this book"
+        android:text="@string/i_give_this_book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <RatingBar
-        android:scaleX="1.1"
-        android:scaleY="1.1"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:scaleX="2.1"
+        android:scaleY="2.1"
         android:clickable="true"
         android:layout_gravity="center"
         android:id="@+id/activity_star_rating_bar_stars"
@@ -34,20 +36,20 @@
     <TextView
         android:layout_gravity="center"
         android:id="@+id/activity_star_text_view_stars"
-        android:textSize="35sp"
+        android:textSize="55dp"
         android:fontFamily="sans-serif-condensed"
         android:text="stars"
-        android:paddingBottom="20dp"
+        android:paddingBottom="95dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:paddingTop="55dp"
+        android:paddingTop="95dp"
         android:layout_gravity="center"
         android:id="@+id/activity_star_text_view_done"
-        android:textSize="35sp"
+        android:textSize="55dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="DONE"
+        android:text="@string/done_large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -55,12 +57,13 @@
         android:layout_gravity="center"
         android:id="@+id/activity_star_done_button"
         android:background="@color/colorWhite"
-        android:layout_width="wrap_content"
+        android:layout_width="194dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:paddingRight="10dp"
         android:gravity="center"
-        android:src="@mipmap/checkbox" />
+        android:src="@mipmap/checkbox"
+        android:layout_weight="0.17" />
 
 
 </LinearLayout>
