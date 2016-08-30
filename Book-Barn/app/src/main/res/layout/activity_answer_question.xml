@@ -8,78 +8,78 @@
     tools:context="com.test.book_barn.activities.AnswerQuestionActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
         android:layout_gravity="center"
         android:orientation="horizontal" >
 
         <TextView
-            android:paddingRight="10dp"
-            android:paddingLeft="2dp"
-            android:paddingTop="10dp"
+            android:paddingRight="2dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="17dp"
             android:maxLines="2"
             android:textColor="#000000"
             android:fontFamily="sans-serif-condensed"
-            android:text="Draw your favorite
-part of the story."
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="@string/draw_your_favorite_part"
+            android:layout_width="121dp"
+            android:layout_height="match_parent" />
 
 
         <ImageButton
-            android:paddingRight="4dp"
-            android:paddingLeft="4dp"
+            android:paddingTop="15dp"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
             android:background="@color/colorAccent"
             android:id="@+id/paper_button"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:layout_width="56dp"
+            android:layout_height="58dp"
             android:contentDescription="@string/start_new"
-            android:src="@drawable/paper" />
+            android:src="@drawable/newpaper" />
 
         <ImageButton
-            android:paddingRight="4dp"
-            android:paddingLeft="4dp"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
             android:background="@color/colorAccent"
             android:id="@+id/brush_button"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:contentDescription="@string/start_new"
-            android:src="@drawable/brush" />
+            android:src="@drawable/paintbrush" />
 
         <ImageButton
-            android:paddingRight="4dp"
-            android:paddingLeft="4dp"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
             android:background="@color/colorAccent"
             android:id="@+id/eraser_button"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:contentDescription="@string/start_new"
-            android:src="@drawable/eraser1" />
+            android:src="@drawable/eraser" />
 
         <ImageButton
-            android:paddingRight="4dp"
-            android:paddingLeft="4dp"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
             android:background="@color/colorAccent"
             android:id="@+id/save_button"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:contentDescription="@string/start_new"
-            android:src="@drawable/save" />
+            android:src="@drawable/savearrow" />
 
 
         <ImageButton
-            android:paddingRight="4dp"
-            android:paddingLeft="4dp"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
             android:background="@color/colorAccent"
             android:id="@+id/home_button"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:contentDescription="@string/start_new"
-            android:src="@mipmap/checkbox" />
+            android:src="@drawable/checkbox" />
 
     </LinearLayout>
 
-    <com.test.sql.views.DrawingView
+    <com.test.book_barn.views.DrawingView
         android:id="@+id/drawing"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -230,8 +230,6 @@ part of the story."
                 android:tag="#FF000000" />
         </LinearLayout>
     </LinearLayout>
-
-
 
 
 </LinearLayout>
