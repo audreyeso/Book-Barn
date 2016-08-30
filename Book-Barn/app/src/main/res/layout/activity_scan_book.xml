@@ -8,72 +8,72 @@
     tools:context=".activities.ScanBookActivity">
 
     <LinearLayout
-        android:fontFamily="sans-serif-condensed"
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:src="@drawable/bookshelfpng"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    <TextView
-        android:fontFamily="sans-serif-condensed"
-        android:id="@+id/textview_scanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="10dp"
-        android:text="@string/student_name"
-        android:textColor="#000000"
-        android:textSize="25dp" />
+        android:fontFamily="sans-serif-condensed"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:src="@drawable/bookshelf" />
+
+        <TextView
+            android:id="@+id/textview_scanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="10dp"
+            android:text="@string/student_name"
+            android:textColor="#000000"
+            android:textSize="30dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:fontFamily="sans-serif-condensed"
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:fontFamily="sans-serif-condensed"
+        android:orientation="horizontal">
 
         <ListView
-            android:fontFamily="sans-serif-condensed"
             android:id="@+id/result_book_listview"
             android:layout_width="match_parent"
-            android:layout_height="260dp" />
+            android:layout_height="260dp"
+            android:fontFamily="sans-serif-condensed" />
 
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <ImageButton
-        android:paddingTop="40dp"
-        android:paddingBottom="10dp"
-        android:id="@+id/book_scanner_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/colorWhite"
-        android:onClick="scanBar"
-        android:src="@drawable/scanbookimage" />
+        <ImageButton
+            android:id="@+id/book_scanner_button"
+            android:layout_width="323dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.72"
+            android:background="@color/colorWhite"
+            android:onClick="scanBar"
+            android:paddingBottom="20dp"
+            android:paddingLeft="30dp"
+            android:src="@drawable/scanbookimage2" />
 
     </LinearLayout>
 
-    </LinearLayout>
+</LinearLayout>
 
 
 

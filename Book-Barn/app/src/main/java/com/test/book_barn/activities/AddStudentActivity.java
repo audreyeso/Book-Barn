@@ -55,10 +55,7 @@ public class AddStudentActivity extends AppCompatActivity {
       viewStudentDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddStudentActivity.this, StudentBookDataActivity.class);
-                intent.putExtra("student", Parcels.wrap(student));
-                intent.putExtra("classroom", Parcels.wrap(classroom));
-                startActivity(intent);
+            setViewStudentIntent();
             }
       });
 
@@ -69,14 +66,7 @@ public class AddStudentActivity extends AppCompatActivity {
         addNewStudentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String studentNameString = studentNameEditText.getText().toString();
-                student = new Student(studentNameString, null,idClassroom);
-                student.setName(studentNameString);
-                studentArrayList.add(student);
-                classroom.setStudents(studentArrayList);
-                db.addStudent(student);
-                customCursorAdapter.swapCursor(db.getStudents(idClassroom));
-                studentNameEditText.setText("");
+            getStudentAndAddToDatabase();
             }
         });
 
@@ -134,5 +124,23 @@ public class AddStudentActivity extends AppCompatActivity {
         viewStudentDataButton = (Button) findViewById(R.id.add_student_activity_view_data_button);
         classroomTitleTextView = (TextView) findViewById(R.id.activity_add_student_classroom_title_textview);
 
+    }
+
+    private void getStudentAndAddToDatabase() {
+        String studentNameString = studentNameEditText.getText().toString();
+        student = new Student(studentNameString, null,idClassroom);
+        student.setName(studentNameString);
+        studentArrayList.add(student);
+        classroom.setStudents(studentArrayList);
+        db.addStudent(student);
+        customCursorAdapter.swapCursor(db.getStudents(idClassroom));
+        studentNameEditText.setText("");
+    }
+
+    private void setViewStudentIntent() {
+        Intent intent = new Intent(AddStudentActivity.this, StudentBookDataActivity.class);
+        intent.putExtra("student", Parcels.wrap(student));
+        intent.putExtra("classroom", Parcels.wrap(classroom));
+        startActivity(intent);
     }
 }

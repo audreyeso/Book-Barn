@@ -67,7 +67,6 @@ public class CustomCursorAdapterBooks extends CursorAdapter {
             public void onClick(View v) {
                 ClassroomOpenHelper classroomOpenHelper = ClassroomOpenHelper.getInstance(context);
                 classroomOpenHelper.removeBooks(id);
-
                 Log.d("Cursor", "remove student");
                 swapCursor(classroomOpenHelper.getBooks(Long.parseLong(bookId)));
             }
