@@ -27,8 +27,8 @@
 
         <ImageButton
             android:paddingTop="15dp"
-            android:paddingRight="3dp"
-            android:paddingLeft="3dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
             android:background="@color/colorAccent"
             android:id="@+id/paper_button"
             android:layout_width="56dp"
@@ -37,8 +37,8 @@
             android:src="@drawable/newpaper" />
 
         <ImageButton
-            android:paddingRight="3dp"
-            android:paddingLeft="3dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
             android:background="@color/colorAccent"
             android:id="@+id/brush_button"
             android:layout_width="wrap_content"
@@ -47,8 +47,8 @@
             android:src="@drawable/paintbrush" />
 
         <ImageButton
-            android:paddingRight="3dp"
-            android:paddingLeft="3dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
             android:background="@color/colorAccent"
             android:id="@+id/eraser_button"
             android:layout_width="wrap_content"
@@ -56,20 +56,20 @@
             android:contentDescription="@string/start_new"
             android:src="@drawable/eraser" />
 
-        <ImageButton
-            android:paddingRight="3dp"
-            android:paddingLeft="3dp"
-            android:background="@color/colorAccent"
-            android:id="@+id/save_button"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:contentDescription="@string/start_new"
-            android:src="@drawable/savearrow" />
+        <!--<ImageButton-->
+            <!--android:paddingRight="3dp"-->
+            <!--android:paddingLeft="3dp"-->
+            <!--android:background="@color/colorAccent"-->
+            <!--android:id="@+id/save_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:contentDescription="@string/start_new"-->
+            <!--android:src="@drawable/savearrow" />-->
 
 
         <ImageButton
-            android:paddingRight="3dp"
-            android:paddingLeft="3dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
             android:background="@color/colorAccent"
             android:id="@+id/home_button"
             android:layout_width="wrap_content"

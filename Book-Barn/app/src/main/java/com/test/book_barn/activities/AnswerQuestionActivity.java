@@ -53,9 +53,10 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnswerQuestionActivity.this, StarRatingActivity.class);
-                intent.putExtra("student", Parcels.wrap(student));
-                startActivity(intent);
+                saveDrawing();
+//                Intent intent = new Intent(AnswerQuestionActivity.this, StarRatingActivity.class);
+//                intent.putExtra("student", Parcels.wrap(student));
+//                startActivity(intent);
             }
         });
 
@@ -157,9 +158,10 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
         } else if (view.getId() == R.id.paper_button) {
             createNewDrawing();
 
-        } else if (view.getId() == R.id.save_button) {
-            saveDrawing();
         }
+//        else if (view.getId() == R.id.save_button) {
+//            saveDrawing();
+//        }
     }
 
     /**
@@ -206,10 +208,12 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
                     Toast savedToast = Toast.makeText(getApplicationContext(),
                             R.string.drawing_saved, Toast.LENGTH_SHORT);
                     savedToast.show();
+                   startIntentForStarRatingActivity();
                 } else {
                     Toast unsavedToast = Toast.makeText(getApplicationContext(),
                             R.string.drawing_not_saved, Toast.LENGTH_SHORT);
                     unsavedToast.show();
+                  startIntentForStarRatingActivity();
                 }
                 drawView.destroyDrawingCache();
             }
@@ -252,8 +256,8 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
         newBtn = (ImageButton) findViewById(R.id.paper_button);
         newBtn.setOnClickListener(this);
 
-        saveBtn = (ImageButton) findViewById(R.id.save_button);
-        saveBtn.setOnClickListener(this);
+//        saveBtn = (ImageButton) findViewById(R.id.save_button);
+//        saveBtn.setOnClickListener(this);
 
         homeBtn = (ImageButton) findViewById(R.id.home_button);
     }
@@ -265,6 +269,13 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
         currPaint = (ImageButton) paintLayout.getChildAt(0);
         currPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
         drawView.setBrushSize(mediumBrush);
+    }
+
+    private void startIntentForStarRatingActivity(){
+
+        Intent intent = new Intent(AnswerQuestionActivity.this, StarRatingActivity.class);
+        intent.putExtra("student", Parcels.wrap(student));
+        startActivity(intent);
 
     }
 }
