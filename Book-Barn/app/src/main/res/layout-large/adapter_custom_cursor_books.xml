@@ -54,15 +54,20 @@
 
 
     <ImageButton
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:paddingBottom="2dp"
+        android:paddingTop="10dp"
         android:id="@+id/adapter_custom_cursor_books_delete_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:clickable="true"
         android:background="@color/colorWhite"
-        android:src="@drawable/ic_delete"
-        android:layout_gravity="right|top" />
+        android:src="@drawable/garbagecan"
+        android:layout_gravity="right|top"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp" />
 
 
 
