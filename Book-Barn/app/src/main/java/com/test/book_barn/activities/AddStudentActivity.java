@@ -25,6 +25,8 @@ import java.util.ArrayList;
 public class AddStudentActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE = 10;
+    static final String STUDENT_KEY = "student";
+    static final String CLASSROOM_KEY = "classroom";
     private Classroom classroom;
     private TextView classroomTitleTextView;
     private ClassroomOpenHelper db;
@@ -89,7 +91,7 @@ public class AddStudentActivity extends AppCompatActivity {
                     selectedStudent.setName(myName);
 
                     Intent intent = new Intent(AddStudentActivity.this, ScanBookActivity.class);
-                    intent.putExtra("student", Parcels.wrap(selectedStudent));
+                    intent.putExtra(STUDENT_KEY, Parcels.wrap(selectedStudent));
                     startActivityForResult(intent, REQUEST_CODE);
                 }
             }
@@ -110,7 +112,7 @@ public class AddStudentActivity extends AppCompatActivity {
      * create intent to pass to next activity
      */
     private void setUpClassroomTitle() {
-        classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra("classroom"));
+        classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
         idClassroom = classroom.getId();
         Intent intent = new Intent(this, ClassroomOpenHelper.class);
         intent.putExtra("id", Parcels.wrap(idClassroom));
@@ -128,7 +130,7 @@ public class AddStudentActivity extends AppCompatActivity {
     private void getStudentAndAddToDatabase() {
         String studentNameString = studentNameEditText.getText().toString();
         if (studentNameString.isEmpty()) {
-            Toast.makeText(AddStudentActivity.this, "Give your student a name.", Toast.LENGTH_LONG).show();
+            Toast.makeText(AddStudentActivity.this, R.string.give_student_name_toast, Toast.LENGTH_LONG).show();
         } else {
             student = new Student(studentNameString, null, idClassroom);
             student.setName(studentNameString);
@@ -142,8 +144,8 @@ public class AddStudentActivity extends AppCompatActivity {
 
     private void setViewStudentIntent() {
         Intent intent = new Intent(AddStudentActivity.this, StudentBookDataActivity.class);
-        intent.putExtra("student", Parcels.wrap(student));
-        intent.putExtra("classroom", Parcels.wrap(classroom));
+        intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
+        intent.putExtra(CLASSROOM_KEY, Parcels.wrap(classroom));
         startActivity(intent);
     }
 }

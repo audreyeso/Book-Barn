@@ -14,6 +14,9 @@ public class SplashAddedBookActivity extends AppCompatActivity {
     /**
      * Splash screen for when a new book is added
      */
+
+    static final String STUDENT_KEY = "student";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +26,9 @@ public class SplashAddedBookActivity extends AppCompatActivity {
 
                 public void run() {
                     finish();
-                    Student student = (Student) Parcels.unwrap(getIntent().getParcelableExtra("student"));
+                    Student student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
                     Intent intent = new Intent(getBaseContext(), AnswerQuestionActivity.class);
-                    intent.putExtra("student",Parcels.wrap(student));
+                    intent.putExtra(STUDENT_KEY,Parcels.wrap(student));
                     startActivity(intent);
 
                 }

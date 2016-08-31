@@ -53,8 +53,6 @@ public class CustomCursorAdapterBooks extends CursorAdapter {
         textViewAuthor.setText(author);
 
         image = (cursor.getString(cursor.getColumnIndex(ClassroomOpenHelper.COL_BOOK_IMAGE)));
-
-
         Picasso.with(context)
                 .load(image)
                 .resize(90, 110)

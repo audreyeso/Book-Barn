@@ -99,4 +99,6 @@
     <string name="how_to_use_book_barn">How To Use</string>
     <string name="about_book_barn">About Book Barn</string>
     <string name="home">home</string>
+    <string name="give_student_name_toast">Give your student a name.</string>
+    <string name="give_class_name_toast">Give your class a name.</string>
 </resources>

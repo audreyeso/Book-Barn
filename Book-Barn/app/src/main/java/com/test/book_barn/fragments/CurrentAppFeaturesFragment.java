@@ -11,6 +11,7 @@ import com.test.book_barn.R;
 
 /**
  * Created by audreyeso on 8/22/16.
+ * gives information about the creator of the application
  */
 public class CurrentAppFeaturesFragment extends Fragment {
 

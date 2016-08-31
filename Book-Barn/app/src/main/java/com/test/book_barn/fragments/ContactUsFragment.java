@@ -10,6 +10,7 @@ import com.test.book_barn.R;
 
 /**
  * Created by audreyeso on 8/22/16.
+ * provides email and a way to contact via email
  */
 public class ContactUsFragment extends android.support.v4.app.Fragment{
 

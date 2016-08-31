@@ -11,6 +11,7 @@ import com.test.book_barn.R;
 
 /**
  * Created by audreyeso on 8/20/16.
+ * provides how to directions/ current features of how the app can be used
  */
 public class InstructionsFragment extends Fragment {
 
@@ -22,7 +23,6 @@ public class InstructionsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_instructions, container, false);
-
 
         return rootView;
     }

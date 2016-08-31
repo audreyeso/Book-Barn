@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final int REQUEST_CODE = 100;
+    static final String CLASSROOM_KEY = "classroom";
     private ClassroomOpenHelper db;
     private ListView classListView;
     private Button addNewClassButton;
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity
                     selectedClassroom.setId(selectedClassroom.getId());
 
                     Intent intent = new Intent(MainActivity.this, AddStudentActivity.class);
-                    intent.putExtra("classroom", Parcels.wrap(selectedClassroom));
+                    intent.putExtra(CLASSROOM_KEY, Parcels.wrap(selectedClassroom));
                     intent.putExtra("name", Parcels.wrap(myName));
                     intent.putExtra("id", Parcels.wrap(selectedClassroom.getId()));
                     startActivityForResult(intent, REQUEST_CODE);
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity
         if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
 
-                Classroom classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra("classroom"));
+                Classroom classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
                 int position = data.getIntExtra("position", 0);
                 classroomArrayList.set(position, classroom);
                 customCursorAdapterClassrooms.swapCursor(db.getClassrooms());
@@ -258,7 +259,7 @@ public class MainActivity extends AppCompatActivity
     private void addNewClass() {
         String classroomNameString = classNameEditText.getText().toString();
         if(classroomNameString.isEmpty()) {
-            Toast.makeText(MainActivity.this,"Give your class a name.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, R.string.give_class_name_toast, Toast.LENGTH_LONG).show();
         } else {
             newClassroom = new Classroom(classroomNameString, null);
             newClassroom.setClassroomName(classroomNameString);

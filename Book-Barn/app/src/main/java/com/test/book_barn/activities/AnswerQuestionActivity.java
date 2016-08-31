@@ -29,6 +29,8 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
     //you can get the name of student here as a toast to make sure that you are drawing in the correct
     //student profile
 
+    static final String STUDENT_KEY = "student";
+
     private DrawingView drawView;
     private float smallBrush, mediumBrush, largeBrush;
     private ImageButton currPaint, drawBtn, eraseBtn, newBtn, homeBtn;
@@ -270,7 +272,7 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
     private void startIntentForStarRatingActivity(){
 
         Intent intent = new Intent(AnswerQuestionActivity.this, StarRatingActivity.class);
-        intent.putExtra("student", Parcels.wrap(student));
+        intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
         startActivity(intent);
 
     }

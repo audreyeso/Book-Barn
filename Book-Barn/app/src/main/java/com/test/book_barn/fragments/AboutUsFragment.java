@@ -10,6 +10,7 @@ import com.test.book_barn.R;
 
 /**
  * Created by audreyeso on 8/22/16.
+ * gives details about the app
  */
 public class AboutUsFragment extends android.support.v4.app.Fragment {
 
