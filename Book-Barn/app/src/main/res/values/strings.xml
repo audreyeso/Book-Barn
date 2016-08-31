@@ -61,4 +61,5 @@
     <string name="i_give_this_book">I give this book</string>
     <string name="done_large">DONE</string>
     <string name="student_name_xlarge">Student Name</string>
+    <string name="enter_class_name_xlarge">Enter Class Name</string>
 </resources>
