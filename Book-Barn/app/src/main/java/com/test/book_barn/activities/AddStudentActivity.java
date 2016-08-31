@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.test.book_barn.R;
 import com.test.book_barn.adapters.CustomCursorAdapter;
@@ -128,13 +129,17 @@ public class AddStudentActivity extends AppCompatActivity {
 
     private void getStudentAndAddToDatabase() {
         String studentNameString = studentNameEditText.getText().toString();
-        student = new Student(studentNameString, null,idClassroom);
-        student.setName(studentNameString);
-        studentArrayList.add(student);
-        classroom.setStudents(studentArrayList);
-        db.addStudent(student);
-        customCursorAdapter.swapCursor(db.getStudents(idClassroom));
-        studentNameEditText.setText("");
+        if (studentNameString.isEmpty()) {
+            Toast.makeText(AddStudentActivity.this, "Give your student a name.", Toast.LENGTH_LONG).show();
+        } else {
+            student = new Student(studentNameString, null, idClassroom);
+            student.setName(studentNameString);
+            studentArrayList.add(student);
+            classroom.setStudents(studentArrayList);
+            db.addStudent(student);
+            customCursorAdapter.swapCursor(db.getStudents(idClassroom));
+            studentNameEditText.setText("");
+        }
     }
 
     private void setViewStudentIntent() {

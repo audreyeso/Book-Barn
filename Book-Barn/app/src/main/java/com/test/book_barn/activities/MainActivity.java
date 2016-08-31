@@ -23,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.test.book_barn.R;
 import com.test.book_barn.adapters.CustomCursorAdapterClassrooms;
@@ -72,12 +73,7 @@ public class MainActivity extends AppCompatActivity
         addNewClassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String classroomNameString = classNameEditText.getText().toString();
-                newClassroom = new Classroom(classroomNameString, null);
-                newClassroom.setClassroomName(classroomNameString);
-                db.addClassroom(newClassroom);
-                customCursorAdapterClassrooms.swapCursor(db.getClassrooms());
-                classNameEditText.setText("");
+                addNewClass();
             }
         });
 
@@ -254,6 +250,23 @@ public class MainActivity extends AppCompatActivity
         classListView = (ListView) findViewById(R.id.main_activity_class_list_view);
         addNewClassButton = (Button) findViewById(R.id.main_activity_button_add_new_class);
         classNameEditText = (EditText) findViewById(R.id.main_activity_edit_text_class_name);
+    }
+
+    /**
+     * add new class to the database
+     */
+    private void addNewClass() {
+        String classroomNameString = classNameEditText.getText().toString();
+        if(classroomNameString.isEmpty()) {
+            Toast.makeText(MainActivity.this,"Give your class a name.", Toast.LENGTH_LONG).show();
+        } else {
+            newClassroom = new Classroom(classroomNameString, null);
+            newClassroom.setClassroomName(classroomNameString);
+            db.addClassroom(newClassroom);
+            customCursorAdapterClassrooms.swapCursor(db.getClassrooms());
+            classNameEditText.setText("");
+        }
+
     }
 
 }
