@@ -17,7 +17,7 @@
             android:textSize="35dp"
             android:textColor="@color/colorPrimary"
             android:fontFamily="sans-serif-condensed"
-            android:text="Who Created Book Barn?"
+            android:text="@string/who_created_book_barn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

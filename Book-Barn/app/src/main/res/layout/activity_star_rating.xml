@@ -18,7 +18,7 @@
         android:textSize="35dp"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/activity_star_text_view_title"
-        android:text="I give this book"
+        android:text="@string/i_give_this_book_xml"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -36,7 +36,7 @@
         android:id="@+id/activity_star_text_view_stars"
         android:textSize="35sp"
         android:fontFamily="sans-serif-condensed"
-        android:text="stars"
+        android:text="@string/stars"
         android:paddingBottom="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -47,7 +47,7 @@
         android:id="@+id/activity_star_text_view_done"
         android:textSize="35sp"
         android:fontFamily="sans-serif-condensed"
-        android:text="DONE"
+        android:text="@string/done_xml"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

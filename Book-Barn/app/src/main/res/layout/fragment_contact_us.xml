@@ -17,7 +17,7 @@
             android:textSize="35dp"
             android:textColor="@color/colorPrimary"
             android:fontFamily="sans-serif-condensed"
-            android:text="Contact Us"
+            android:text="@string/contact_us"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:textSize="21dp"
-            android:text= "Questions? Comments...?"
+            android:text= "@string/questions_comments"
             />
 
         <TextView
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:textSize="21dp"
-            android:text= "Email: bookbarnliteracy@gmail.com"
+            android:text= "@string/email_bookbarnliteracy_gmail_com"
             />
 
         <ImageView

@@ -30,7 +30,7 @@
         android:paddingLeft="35dp"
         android:paddingRight="35dp"
         android:paddingTop="28dp"
-        android:text="Student Name"
+        android:text="@string/student_name_list_of_students"
         android:textSize="18dp" />
 
 

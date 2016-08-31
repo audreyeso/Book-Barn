@@ -29,7 +29,7 @@
         android:maxLength="25"
         android:paddingTop="28dp"
         android:ellipsize="marquee"
-        android:text="Classroom Name"
+        android:text="@string/classroom_name_custom_cursoradapter"
         android:textSize="18dp" />
 
 

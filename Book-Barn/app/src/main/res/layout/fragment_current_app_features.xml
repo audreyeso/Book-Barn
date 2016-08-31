@@ -17,7 +17,7 @@
             android:textSize="35dp"
             android:textColor="@color/colorPrimary"
             android:fontFamily="sans-serif-condensed"
-            android:text="How To Use"
+            android:text="@string/how_to_use"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="For Teachers"
+            android:text="@string/for_teachers"
             android:textSize="21dp"
             />
 
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="1. Create a classroom."
+            android:text="@string/_1_create_a_classroom"
             android:textSize="15dp"
             />
         <TextView
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="2. Add your students."
+            android:text="@string/_2_add_your_students"
             android:textSize="15dp"
             />
         <TextView
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="3. Check out what your students are reading!"
+            android:text="@string/_3_check_out_what_your_students_are_reading"
             android:textSize="15dp"
             />
 
@@ -82,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="For Students"
+            android:text="@string/for_students"
             android:textSize="21dp"
             />
 
@@ -94,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="1. Click on your name or animal."
+            android:text="@string/_1_click_on_your_name_or_animal"
             android:textSize="15dp"
             />
         <TextView
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="2. Scan a book into your bookshelf."
+            android:text="@string/_2_scan_a_book_into_your_bookshelf"
             android:textSize="15dp"
             />
         <TextView
@@ -116,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="3.Sketch your favorite part of the story."
+            android:text="@string/_3_sketch_your_favorite_part_of_the_story"
             android:textSize="15dp"
             />
         <TextView
@@ -127,7 +127,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:text="4. Rate your book!"
+            android:text="@string/_4_rate_your_book"
             android:textSize="15dp"
             />
 

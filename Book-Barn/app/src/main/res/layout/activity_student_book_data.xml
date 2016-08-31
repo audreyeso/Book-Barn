@@ -18,7 +18,7 @@
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/student_book_data_activity_title"
         android:layout_gravity="center"
-        android:text="Student Barnyard"
+        android:text="@string/student_barnyard_book_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -26,15 +26,5 @@
         android:id="@+id/student_book_data_activity_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-    <!--<HorizontalScrollView-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_width="wrap_content">-->
-        <!--<view-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--class="im.dacer.androidcharts.BarView"-->
-            <!--android:id="@+id/bar_view" />-->
-    <!--</HorizontalScrollView>-->
 
 </LinearLayout>

@@ -22,14 +22,14 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 7;
     public static final String DATABASE_NAME = "CLASSROOM_DB";
 
+    /**
+     * classroom table and columns
+     */
     public static final String CLASSROOM_TABLE_NAME = "CLASSROOM";
-
     public static final String COL_ID = "_id";
     public static final String COL_CLASSROOM_NAME = "NAME";
     public static final String COL_CLASSROOM_STUDENT_NAMES = "STUDENTNAME";
-
     public static final String[] CLASSROOM_COLUMNS = {COL_ID, COL_CLASSROOM_NAME};
-
     public static final String CREATE_CLASSROOM_TABLE = "CREATE TABLE " + CLASSROOM_TABLE_NAME +
             "(" +
             COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -37,20 +37,23 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
             COL_CLASSROOM_STUDENT_NAMES + " TEXT)";
 
 
+    /**
+     * student table and columns
+     */
     public static final String STUDENT_TABLE_NAME = "STUDENT";
-
     public static final String COL_ID_STUDENTS = "_id";
     public static final String COL_CLASSROOM_ID_KEY = "CLASSID";
     public static final String COL_STUDENT_NAME = "STUDENTNAMESCOLUMN";
-
-
     public static final String[] STUDENT_COLUMNS = {COL_ID_STUDENTS, COL_STUDENT_NAME, COL_CLASSROOM_ID_KEY};
-
     public static final String CREATE_STUDENT_TABLE = "CREATE TABLE " + STUDENT_TABLE_NAME +
             "(" +
             COL_ID_STUDENTS + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             COL_CLASSROOM_ID_KEY + " TEXT, " +
             COL_STUDENT_NAME + " TEXT)";
+
+    /**
+     * book table and columns
+     */
 
     public static final String BOOK_TABLE_NAME = "BOOK";
     public static final String COL_ID_BOOK = "_id";
@@ -59,9 +62,7 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
     public static final String COL_BOOK_NAME = "BOOKNAME";
     public static final String COL_BOOK_AUTHOR = "AUTHOR";
     public static final String COL_BOOK_IMAGE = "IMAGE";
-
     public static final String[] BOOK_COLUMNS = {COL_ID_BOOK, COL_BOOK_ISBN, COL_STUDENT_BOOK_ID, COL_BOOK_NAME, COL_BOOK_AUTHOR, COL_BOOK_IMAGE};
-
     public static final String CREATE_BOOK_TABLE = "CREATE TABLE " + BOOK_TABLE_NAME +
             "(" +
             COL_ID_BOOK + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -97,6 +98,10 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
+    /**
+     * add new Classroom to db
+     */
+
     public void addClassroom(Classroom classroom) {
         ContentValues values = new ContentValues();
         values.put(COL_CLASSROOM_NAME, classroom.getClassroomName());
@@ -104,6 +109,10 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
         db.insert(CLASSROOM_TABLE_NAME, null, values);
         db.close();
     }
+
+    /**
+     * add new Student to db
+     */
 
     public void addStudent(Student student) {
         ContentValues values = new ContentValues();
@@ -114,7 +123,9 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-
+    /**
+     * add new Book to db
+     */
     public void addBook(Book book) {
         ContentValues values = new ContentValues();
         values.put(COL_BOOK_NAME, book.getTitle());
@@ -126,33 +137,46 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * remove Classroom from db
+     */
     public void removeClassroom(int id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(CLASSROOM_TABLE_NAME, COL_ID + "= ?", new String[]{String.valueOf(id)});
         db.close();
     }
 
-
+    /**
+     * remove Student from db
+     */
     public void removeStudent(int id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(STUDENT_TABLE_NAME, COL_ID_STUDENTS + "= ?", new String[]{String.valueOf(id)});
         db.close();
     }
 
+    /**
+     * remove book from db
+     */
     public void removeBooks(int id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(BOOK_TABLE_NAME, COL_ID_BOOK + "= ?", new String[]{String.valueOf(id)});
         db.close();
     }
 
+    /**
+     * get all classrooms
+     */
     public Cursor getClassrooms() {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(CLASSROOM_TABLE_NAME, CLASSROOM_COLUMNS, null, null, null, null, null);
         return cursor;
     }
 
+    /**
+     * get students based on classroom id (which class they are in)
+     */
     public Cursor getStudents(long id) {
-
         SQLiteDatabase database = getReadableDatabase();
         Cursor cursor = database.query(ClassroomOpenHelper.STUDENT_TABLE_NAME,
                 null,
@@ -161,12 +185,13 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
                 null, null, null);
         cursor.moveToFirst();
         return cursor;
-
     }
 
+    /**
+     * get books based on student book id (which student they belong to)
+     */
 
     public Cursor getBooks(long id) {
-
         SQLiteDatabase database = getReadableDatabase();
         Cursor cursor = database.query(ClassroomOpenHelper.BOOK_TABLE_NAME,
                 null,
@@ -175,9 +200,11 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
                 null, null, null);
         cursor.moveToFirst();
         return cursor;
-
     }
 
+    /**
+     * get number of books each student has read so far
+     */
     public int getNumberofBooks(long id) {
         SQLiteDatabase database = getReadableDatabase();
         Cursor cursor = database.query(ClassroomOpenHelper.BOOK_TABLE_NAME,
@@ -186,7 +213,6 @@ public class ClassroomOpenHelper extends SQLiteOpenHelper {
                 new String[]{id + ""},
                 null, null, null);
         cursor.moveToFirst();
-
         return cursor.getCount();
     }
 }

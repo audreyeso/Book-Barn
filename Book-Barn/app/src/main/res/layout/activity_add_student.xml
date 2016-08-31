@@ -34,7 +34,7 @@
         android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter Student Name"
+        android:hint="@string/enter_student_name_xml"
         android:maxLength="22"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/add_student_activity_edit_text_class_name"/>
@@ -50,7 +50,7 @@
         android:paddingRight="20dp"
         android:layout_marginLeft="80sp"
         android:layout_gravity="center"
-        android:text="ADD"
+        android:text="@string/add"
         android:id="@+id/add_student_activity_class_button"/>
 
     </LinearLayout>
@@ -67,7 +67,7 @@
         android:id="@+id/add_student_activity_view_data_button"
         android:background="@color/colorAccent"
         android:fontFamily="sans-serif-condensed"
-        android:text="Student Barnyard"
+        android:text="@string/student_barnyard"
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="83dp" />

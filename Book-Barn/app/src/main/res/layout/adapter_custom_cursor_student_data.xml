@@ -20,7 +20,7 @@
         android:paddingBottom="10dp"
         android:paddingRight="35dp"
         android:paddingLeft="35dp"
-        android:text="Student Name"/>
+        android:text="@string/student_name_xml"/>
 
 
     <TextView
@@ -37,7 +37,7 @@
         android:paddingBottom="10dp"
         android:paddingRight="35dp"
         android:paddingLeft="35dp"
-        android:text="# of books"
+        android:text="@string/of_books"
          />
 </RelativeLayout>
 
