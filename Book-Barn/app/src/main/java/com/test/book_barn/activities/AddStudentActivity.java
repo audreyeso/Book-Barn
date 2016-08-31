@@ -99,7 +99,6 @@ public class AddStudentActivity extends AppCompatActivity {
     /**
      * set cursor adapter and listview
      */
-
     private void setupCursorAdapter() {
         Cursor cursor = db.getStudents(idClassroom);
         customCursorAdapter = new CustomCursorAdapter(this, cursor);
@@ -124,7 +123,6 @@ public class AddStudentActivity extends AppCompatActivity {
         studentNameEditText = (EditText) findViewById(R.id.add_student_activity_edit_text_class_name);
         viewStudentDataButton = (Button) findViewById(R.id.add_student_activity_view_data_button);
         classroomTitleTextView = (TextView) findViewById(R.id.activity_add_student_classroom_title_textview);
-
     }
 
     private void getStudentAndAddToDatabase() {
