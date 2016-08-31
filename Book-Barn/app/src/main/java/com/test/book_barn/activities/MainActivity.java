@@ -44,12 +44,12 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final int REQUEST_CODE = 100;
     private ClassroomOpenHelper db;
     private ListView classListView;
     private Button addNewClassButton;
     private EditText classNameEditText;
     private ArrayList<Classroom> classroomArrayList;
-    private static final int REQUEST_CODE = 100;
     private Classroom newClassroom;
     private CustomCursorAdapterClassrooms customCursorAdapterClassrooms;
 

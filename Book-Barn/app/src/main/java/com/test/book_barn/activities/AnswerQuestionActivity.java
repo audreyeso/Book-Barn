@@ -30,9 +30,8 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
     //student profile
 
     private DrawingView drawView;
-    //private Dialog brushDialog;
     private float smallBrush, mediumBrush, largeBrush;
-    private ImageButton currPaint, drawBtn, eraseBtn, newBtn, saveBtn, homeBtn;
+    private ImageButton currPaint, drawBtn, eraseBtn, newBtn, homeBtn;
     private Student student;
 
     @Override
@@ -255,9 +254,6 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
 
         newBtn = (ImageButton) findViewById(R.id.paper_button);
         newBtn.setOnClickListener(this);
-
-//        saveBtn = (ImageButton) findViewById(R.id.save_button);
-//        saveBtn.setOnClickListener(this);
 
         homeBtn = (ImageButton) findViewById(R.id.home_button);
     }

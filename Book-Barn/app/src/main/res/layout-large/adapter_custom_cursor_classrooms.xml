@@ -41,7 +41,7 @@
         android:layout_height="65dp"
         android:clickable="true"
         android:background="@color/colorWhite"
-        android:src="@drawable/garbagecan"
+        android:src="@drawable/smallgarbage"
         android:layout_gravity="right|top"
         android:layout_alignBottom="@+id/linearLayout"
         android:layout_alignParentRight="true"

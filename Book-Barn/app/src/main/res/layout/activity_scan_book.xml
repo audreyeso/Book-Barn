@@ -43,7 +43,7 @@
         <ListView
             android:id="@+id/result_book_listview"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
+            android:layout_height="279dp"
             android:fontFamily="sans-serif-condensed" />
 
         <ProgressBar

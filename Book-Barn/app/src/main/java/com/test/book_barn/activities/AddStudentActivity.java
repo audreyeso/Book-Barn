@@ -23,13 +23,13 @@ import java.util.ArrayList;
 
 public class AddStudentActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CODE = 10;
     private Classroom classroom;
     private TextView classroomTitleTextView;
     private ClassroomOpenHelper db;
     private ListView studentListView;
     private EditText studentNameEditText;
     private ArrayList<Student> studentArrayList;
-    private static final int REQUEST_CODE = 10;
     private Button addNewStudentButton, viewStudentDataButton;
     private Student student;
     private long idClassroom;

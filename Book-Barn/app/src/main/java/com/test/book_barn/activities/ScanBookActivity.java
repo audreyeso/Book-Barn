@@ -43,11 +43,15 @@ public class ScanBookActivity extends AppCompatActivity {
 
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
     static final String SCAN_MODE = "SCAN_MODE";
+    static final String SCAN_RESULT = "SCAN_RESULT";
     static final String PRODUCT_MODE = "PRODUCT_MODE";
+    static final String STUDENT_ID_KEY = "idStudent";
+    static final String STUDENT_KEY = "student";
+    static final String SAVE_HISTORY = "SAVE_HISTORY";
+    private String baseUrl = "https://www.googleapis.com/books/v1/";
 
     private TextView  scan;
     private ImageButton newScanner;
-    private String baseUrl = "https://www.googleapis.com/books/v1/";
     private String contents, title, author, full, imageUrl;
     private Student student;
     private ClassroomOpenHelper db;
@@ -78,14 +82,14 @@ public class ScanBookActivity extends AppCompatActivity {
         setUpCursorAdapter();
 
         Intent intent = new Intent(this, ClassroomOpenHelper.class);
-        intent.putExtra("idStudent", Parcels.wrap(idStudent));
+        intent.putExtra(STUDENT_ID_KEY, Parcels.wrap(idStudent));
 
         newScanner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CaptureActivity.class);
                 intent.setAction(ACTION_SCAN);
-                intent.putExtra("SAVE_HISTORY", true);
+                intent.putExtra(SAVE_HISTORY, true);
                 intent.putExtra(SCAN_MODE, PRODUCT_MODE);
                 startActivityForResult(intent, 0);
 
@@ -100,11 +104,11 @@ public class ScanBookActivity extends AppCompatActivity {
 
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
-                contents = data.getStringExtra("SCAN_RESULT");
+                contents = data.getStringExtra(SCAN_RESULT);
                 DatabaseAsyncTask dbTask = new DatabaseAsyncTask();
                 dbTask.execute();
                 Intent intent = new Intent(ScanBookActivity.this, SplashAddedBookActivity.class);
-                intent.putExtra("student", Parcels.wrap(student));
+                intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
                 startActivity(intent);
 
             } else if (resultCode == RESULT_CANCELED) {
@@ -208,7 +212,7 @@ public class ScanBookActivity extends AppCompatActivity {
         scan = (TextView) findViewById(R.id.textview_scanner);
         newScanner = (ImageButton) findViewById(R.id.book_scanner_button);
         bookResultsListView = (ListView) findViewById(R.id.result_book_listview);
-        student = (Student) Parcels.unwrap(getIntent().getParcelableExtra("student"));
+        student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
         scan.setText(student.getName() + getString(R.string.s_books));
     }
 
