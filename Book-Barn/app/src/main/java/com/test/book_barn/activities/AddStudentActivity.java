@@ -76,6 +76,10 @@ public class AddStudentActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * return home from add student activity
+         */
+        
         backHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +89,7 @@ public class AddStudentActivity extends AppCompatActivity {
         });
 
         /**
-         * get stucdent that was clicked on from the database and let them scan a book
+         * get student that was clicked on from the database and let them scan a book
          */
 
         studentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
