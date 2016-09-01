@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class AddStudentActivity extends AppCompatActivity {
     private EditText studentNameEditText;
     private ArrayList<Student> studentArrayList;
     private Button addNewStudentButton, viewStudentDataButton;
+    private ImageButton backHomeButton;
     private Student student;
     private long idClassroom;
     private CustomCursorAdapter customCursorAdapter;
@@ -59,6 +61,7 @@ public class AddStudentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
             setViewStudentIntent();
+
             }
       });
 
@@ -70,6 +73,14 @@ public class AddStudentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
             getStudentAndAddToDatabase();
+            }
+        });
+
+        backHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddStudentActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -125,6 +136,7 @@ public class AddStudentActivity extends AppCompatActivity {
         addNewStudentButton = (Button) findViewById(R.id.add_student_activity_class_button);
         studentNameEditText = (EditText) findViewById(R.id.add_student_activity_edit_text_class_name);
         viewStudentDataButton = (Button) findViewById(R.id.add_student_activity_view_data_button);
+        backHomeButton = (ImageButton)findViewById(R.id.add_student_activity_back__home_button);
         classroomTitleTextView = (TextView) findViewById(R.id.activity_add_student_classroom_title_textview);
     }
 
