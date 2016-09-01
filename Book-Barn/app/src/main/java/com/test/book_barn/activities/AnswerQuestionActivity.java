@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.test.book_barn.R;
+import com.test.book_barn.models.Classroom;
 import com.test.book_barn.models.Student;
 import com.test.book_barn.views.DrawingView;
 
@@ -30,11 +31,13 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
     //student profile
 
     static final String STUDENT_KEY = "student";
+    static final String CLASSROOM_KEY = "classroom";
 
     private DrawingView drawView;
     private float smallBrush, mediumBrush, largeBrush;
     private ImageButton currPaint, drawBtn, eraseBtn, newBtn, homeBtn;
     private Student student;
+    private Classroom classroom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -233,7 +236,8 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
      */
 
     private void getStudentName() {
-        student = (Student) Parcels.unwrap(getIntent().getParcelableExtra("student"));
+        student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
+        classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
 
     }
 
@@ -273,6 +277,7 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
 
         Intent intent = new Intent(AnswerQuestionActivity.this, StarRatingActivity.class);
         intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
+        intent.putExtra(CLASSROOM_KEY, Parcels.wrap(classroom));
         startActivity(intent);
 
     }

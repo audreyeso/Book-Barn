@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.RatingBar;
 
 import com.test.book_barn.R;
+import com.test.book_barn.models.Classroom;
 import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
@@ -23,10 +24,12 @@ public class StarRatingActivity extends AppCompatActivity {
 
 
     static final String STUDENT_KEY = "student";
+    static final String CLASSROOM_KEY = "classroom";
 
     private RatingBar ratingBar;
     private ImageButton doneButton;
     private Student student;
+    private Classroom classroom;
 
 
     @Override
@@ -36,6 +39,7 @@ public class StarRatingActivity extends AppCompatActivity {
 
         setTitle("");
         student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
+        classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
         doneButton = (ImageButton) findViewById(R.id.activity_star_done_button);
         setUpRatingBar();
 
@@ -43,8 +47,9 @@ public class StarRatingActivity extends AppCompatActivity {
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StarRatingActivity.this, MainActivity.class);
+                Intent intent = new Intent(StarRatingActivity.this, AddStudentActivity.class);
                 intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
+                intent.putExtra(CLASSROOM_KEY, Parcels.wrap(classroom));
                 startActivity(intent);
 
             }

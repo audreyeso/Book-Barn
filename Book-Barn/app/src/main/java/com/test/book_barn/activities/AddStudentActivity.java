@@ -92,6 +92,7 @@ public class AddStudentActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(AddStudentActivity.this, ScanBookActivity.class);
                     intent.putExtra(STUDENT_KEY, Parcels.wrap(selectedStudent));
+                    intent.putExtra(CLASSROOM_KEY, Parcels.wrap(classroom)); // just added
                     startActivityForResult(intent, REQUEST_CODE);
                 }
             }

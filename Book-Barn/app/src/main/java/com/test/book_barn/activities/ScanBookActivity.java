@@ -23,6 +23,7 @@ import com.test.book_barn.googleApiModels.Example;
 import com.test.book_barn.helpers.ClassroomOpenHelper;
 import com.test.book_barn.interfaces.GoogleBooksAPI;
 import com.test.book_barn.models.Book;
+import com.test.book_barn.models.Classroom;
 import com.test.book_barn.models.Student;
 
 import org.parceler.Parcels;
@@ -47,6 +48,7 @@ public class ScanBookActivity extends AppCompatActivity {
     static final String PRODUCT_MODE = "PRODUCT_MODE";
     static final String STUDENT_ID_KEY = "idStudent";
     static final String STUDENT_KEY = "student";
+    static final String CLASSROOM_KEY = "classroom"; //classroom added
     static final String SAVE_HISTORY = "SAVE_HISTORY";
     private String baseUrl = "https://www.googleapis.com/books/v1/";
 
@@ -54,6 +56,7 @@ public class ScanBookActivity extends AppCompatActivity {
     private ImageButton newScanner;
     private String contents, title, author, full, imageUrl;
     private Student student;
+    private Classroom classroom; //adds classroom
     private ClassroomOpenHelper db;
     private Book book;
     private ListView bookResultsListView;
@@ -109,6 +112,7 @@ public class ScanBookActivity extends AppCompatActivity {
                 dbTask.execute();
                 Intent intent = new Intent(ScanBookActivity.this, SplashAddedBookActivity.class);
                 intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
+                intent.putExtra(CLASSROOM_KEY,Parcels.wrap(classroom));
                 startActivity(intent);
 
             } else if (resultCode == RESULT_CANCELED) {
@@ -213,6 +217,7 @@ public class ScanBookActivity extends AppCompatActivity {
         newScanner = (ImageButton) findViewById(R.id.book_scanner_button);
         bookResultsListView = (ListView) findViewById(R.id.result_book_listview);
         student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
+        classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
         scan.setText(student.getName() + getString(R.string.s_books));
     }
 
