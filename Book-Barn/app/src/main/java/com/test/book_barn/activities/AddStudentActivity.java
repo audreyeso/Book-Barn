@@ -28,6 +28,7 @@ public class AddStudentActivity extends AppCompatActivity {
     private static final int REQUEST_CODE = 10;
     static final String STUDENT_KEY = "student";
     static final String CLASSROOM_KEY = "classroom";
+    static final String ID_KEY = "id";
     private Classroom classroom;
     private TextView classroomTitleTextView;
     private ClassroomOpenHelper db;
@@ -131,7 +132,7 @@ public class AddStudentActivity extends AppCompatActivity {
         classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
         idClassroom = classroom.getId();
         Intent intent = new Intent(this, ClassroomOpenHelper.class);
-        intent.putExtra("id", Parcels.wrap(idClassroom));
+        intent.putExtra(ID_KEY, Parcels.wrap(idClassroom));
         classroomTitleTextView.setText(classroom.getClassroomName());
     }
 

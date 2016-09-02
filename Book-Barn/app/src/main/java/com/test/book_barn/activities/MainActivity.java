@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity
 
     private static final int REQUEST_CODE = 100;
     static final String CLASSROOM_KEY = "classroom";
+    static final String NAME_KEY = "name";
+    static final String ID_KEY = "id";
+    static final String POSITION_KEY = "position";
     private ClassroomOpenHelper db;
     private ListView classListView;
     private Button addNewClassButton;
@@ -99,8 +102,8 @@ public class MainActivity extends AppCompatActivity
 
                     Intent intent = new Intent(MainActivity.this, AddStudentActivity.class);
                     intent.putExtra(CLASSROOM_KEY, Parcels.wrap(selectedClassroom));
-                    intent.putExtra("name", Parcels.wrap(myName));
-                    intent.putExtra("id", Parcels.wrap(selectedClassroom.getId()));
+                    intent.putExtra(NAME_KEY, Parcels.wrap(myName));
+                    intent.putExtra(ID_KEY, Parcels.wrap(selectedClassroom.getId()));
                     startActivityForResult(intent, REQUEST_CODE);
                 }
             }
@@ -116,7 +119,7 @@ public class MainActivity extends AppCompatActivity
             if (resultCode == RESULT_OK) {
 
                 Classroom classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
-                int position = data.getIntExtra("position", 0);
+                int position = data.getIntExtra(POSITION_KEY, 0);
                 classroomArrayList.set(position, classroom);
                 customCursorAdapterClassrooms.swapCursor(db.getClassrooms());
 

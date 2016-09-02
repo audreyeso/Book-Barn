@@ -141,6 +141,7 @@ public class ScanBookActivity extends AppCompatActivity {
         }
     }
 
+
     protected void getBookDescription() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
