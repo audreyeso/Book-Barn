@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.test.book_barn.activities.StarRatingActivity"
+    android:background="@color/colorWhite"
+    android:weightSum="1">
+
+    <TextView
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/activity_star_text_view_title"
+        android:text="@string/i_give_this_book_xml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RatingBar
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:id="@+id/activity_star_rating_bar_stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/activity_star_text_view_stars"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/stars"
+        android:paddingBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/activity_star_text_view_done"
+        android:textSize="35sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/done_xml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:layout_gravity="center"
+        android:id="@+id/activity_star_done_button"
+        android:background="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:src="@drawable/checkbox" />
+
+
+</LinearLayout>

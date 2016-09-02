@@ -17,7 +17,7 @@
 
     <TextView
         android:text="@string/book_barn"
-        android:textSize="77dp"
+        android:textSize="27dp"
         android:fontFamily="sans-serif-condensed"
         android:textColor="@color/colorPrimary"
         android:layout_gravity="center"
@@ -26,7 +26,7 @@
 
     <TextView
         android:text="@string/welcome_to_your_barnyard"
-        android:textSize="52dp"
+        android:textSize="22dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:fontFamily="sans-serif-condensed"
@@ -38,7 +38,7 @@
     <TextView
         android:text="@string/select_an_existing_classroom"
         android:layout_gravity="center"
-        android:textSize = "28dp"
+        android:textSize = "15dp"
         android:textColor="#000000"
         android:fontFamily="sans-serif-condensed"
         android:layout_width="wrap_content"
@@ -51,30 +51,29 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:textSize="35dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:hint="@string/enter_class_name_xlarge"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:maxLength="40"
+            android:hint="@string/enter_class_name"
+            android:maxLength="24"
             android:id="@+id/main_activity_edit_text_class_name"/>
 
         <Button
             android:id="@+id/main_activity_button_add_new_class"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:textSize="24dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
             android:textColor="@color/colorWhite"
             android:backgroundTint="@color/colorAccent"
             android:fontFamily="sans-serif-condensed"
-            android:text="ADD" />
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="13dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="100sp"
+            android:layout_gravity="center"
+            android:text="@string/add"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            />
 
     </RelativeLayout>
 

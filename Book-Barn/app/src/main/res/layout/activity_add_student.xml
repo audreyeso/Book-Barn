@@ -45,7 +45,7 @@
     </RelativeLayout>
 
 
-    <LinearLayout
+    <RelativeLayout
         android:paddingTop="25dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/enter_student_name_xml"
-        android:maxLength="22"
+        android:maxLength="24"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/add_student_activity_edit_text_class_name"/>
 
@@ -70,12 +70,13 @@
         android:textSize="14dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:layout_marginLeft="80sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_gravity="center"
         android:text="@string/add"
         android:id="@+id/add_student_activity_class_button"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <ListView
         android:fontFamily="sans-serif-condensed"

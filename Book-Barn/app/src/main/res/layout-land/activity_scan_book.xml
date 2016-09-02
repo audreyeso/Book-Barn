@@ -8,63 +8,57 @@
     tools:context=".activities.ScanBookActivity">
 
     <LinearLayout
-        android:fontFamily="sans-serif-condensed"
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:fontFamily="sans-serif-condensed"
+        android:orientation="horizontal">
 
         <ImageView
-            android:src="@drawable/bookshelf"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:src="@drawable/bookshelf" />
 
         <TextView
-            android:fontFamily="sans-serif-condensed"
             android:id="@+id/textview_scanner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
             android:padding="10dp"
             android:text="@string/student_name"
             android:textColor="#000000"
-            android:textSize="55dp" />
+            android:textSize="30dp" />
 
     </LinearLayout>
 
-
-
-
     <LinearLayout
-        android:fontFamily="sans-serif-condensed"
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="wrap_content">
-
+        android:fontFamily="sans-serif-condensed"
+        android:orientation="horizontal">
 
         <ListView
-            android:fontFamily="sans-serif-condensed"
             android:id="@+id/result_book_listview"
             android:layout_width="match_parent"
-            android:layout_height="631dp" />
+            android:layout_height="46dp"
+            android:fontFamily="sans-serif-condensed" />
 
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:visibility="invisible"
-            />
-
+            android:visibility="invisible" />
 
     </LinearLayout>
 
-
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="128dp"
+        android:orientation="vertical">
 
         <TextView
             android:textColor="#000000"
@@ -75,20 +69,19 @@
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:paddingTop="40dp"
-            android:paddingBottom="10dp"
             android:id="@+id/book_scanner_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:background="@color/colorWhite"
             android:onClick="scanBar"
+            android:paddingBottom="20dp"
+            android:layout_gravity="center"
             android:src="@drawable/scanbookimage2" />
-
 
     </LinearLayout>
 
 </LinearLayout>
+
 
 
 

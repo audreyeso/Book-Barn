@@ -25,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.AddStudentActivity" />
-        <activity android:name=".activities.ScanBookActivity" />
+        <activity android:name=".activities.ScanBookActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activities.AnswerQuestionActivity" />
         <activity
             android:name=".activities.MainActivity"

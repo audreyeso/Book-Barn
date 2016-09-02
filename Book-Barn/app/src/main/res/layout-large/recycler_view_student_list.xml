@@ -35,7 +35,7 @@
 
 
     <ImageButton
-        android:id="@+id/adapter_custom_cursor_books_delete_button"
+        android:id="@+id/recycler_view_delete_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"

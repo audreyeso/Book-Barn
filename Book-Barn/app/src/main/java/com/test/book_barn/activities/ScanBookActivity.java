@@ -116,7 +116,7 @@ public class ScanBookActivity extends AppCompatActivity {
                 startActivity(intent);
 
             } else if (resultCode == RESULT_CANCELED) {
-                Toast.makeText(this, R.string.no_wifi + contents, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.no_wifi, Toast.LENGTH_LONG).show();
             }
         }
     }

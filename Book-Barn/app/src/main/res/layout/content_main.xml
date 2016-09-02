@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
+    <RelativeLayout
         android:paddingTop="25dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
         android:hint="@string/enter_class_name"
-        android:maxLength="21"
+        android:maxLength="24"
         android:id="@+id/main_activity_edit_text_class_name"/>
 
         <Button
@@ -71,9 +71,11 @@
             android:layout_marginLeft="100sp"
             android:layout_gravity="center"
             android:text="@string/add"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
              />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <ListView
         android:backgroundTint="@color/colorAccent"
