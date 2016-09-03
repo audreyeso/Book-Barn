@@ -30,6 +30,7 @@ public class SplashAddedBookActivity extends AppCompatActivity {
                     finish();
                     Student student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
                     Classroom classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
+
                     Intent intent = new Intent(getBaseContext(), AnswerQuestionActivity.class);
                     intent.putExtra(STUDENT_KEY,Parcels.wrap(student));
                     intent.putExtra(CLASSROOM_KEY,Parcels.wrap(classroom));

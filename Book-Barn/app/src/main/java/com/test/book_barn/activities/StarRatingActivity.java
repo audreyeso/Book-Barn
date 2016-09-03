@@ -38,11 +38,13 @@ public class StarRatingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_star_rating);
 
         setTitle("");
-        student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
-        classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
+        unwrapExtras();
         doneButton = (ImageButton) findViewById(R.id.activity_star_done_button);
         setUpRatingBar();
 
+        /**
+         * finish activity and move on to next one with the same student and classroom
+         */
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +53,6 @@ public class StarRatingActivity extends AppCompatActivity {
                 intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
                 intent.putExtra(CLASSROOM_KEY, Parcels.wrap(classroom));
                 startActivity(intent);
-
             }
         });
 
@@ -66,6 +67,15 @@ public class StarRatingActivity extends AppCompatActivity {
         LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
         stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
 
+    }
+
+    /**
+     * unwrap student and classroom from previous activity
+     */
+
+    public void unwrapExtras(){
+        student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
+        classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
     }
 
 }

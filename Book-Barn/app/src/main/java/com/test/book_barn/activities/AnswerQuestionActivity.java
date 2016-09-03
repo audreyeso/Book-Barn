@@ -230,7 +230,6 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
         });
 
         saveDialog.show();
-
     }
 
     /**
@@ -240,7 +239,6 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
     private void getStudentName() {
         student = (Student) Parcels.unwrap(getIntent().getParcelableExtra(STUDENT_KEY));
         classroom = (Classroom) Parcels.unwrap(getIntent().getParcelableExtra(CLASSROOM_KEY));
-
     }
 
     /**
@@ -267,7 +265,6 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
     }
 
     private void setUpViews() {
-
         drawView = (DrawingView) findViewById(R.id.drawing);
         LinearLayout paintLayout = (LinearLayout) findViewById(R.id.paint_colors);
         currPaint = (ImageButton) paintLayout.getChildAt(0);
@@ -276,7 +273,6 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
     }
 
     private void startIntentForStarRatingActivity(){
-
         Intent intent = new Intent(AnswerQuestionActivity.this, StarRatingActivity.class);
         intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
         intent.putExtra(CLASSROOM_KEY, Parcels.wrap(classroom));

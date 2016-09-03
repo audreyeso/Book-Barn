@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity
     static final String NAME_KEY = "name";
     static final String ID_KEY = "id";
     static final String POSITION_KEY = "position";
+
     private ClassroomOpenHelper db;
     private ListView classListView;
     private Button addNewClassButton;

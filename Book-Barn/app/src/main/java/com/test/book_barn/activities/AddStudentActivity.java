@@ -29,6 +29,7 @@ public class AddStudentActivity extends AppCompatActivity {
     static final String STUDENT_KEY = "student";
     static final String CLASSROOM_KEY = "classroom";
     static final String ID_KEY = "id";
+
     private Classroom classroom;
     private TextView classroomTitleTextView;
     private ClassroomOpenHelper db;

@@ -73,19 +73,13 @@ public class ScanBookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scan_book);
 
         progressBar = (ProgressBar) findViewById(R.id.progress);
-
         setTitle("");
-
         bookArrayList = new ArrayList<>();
-
         db = ClassroomOpenHelper.getInstance(this);
-
         setUpTextViews();
-
         setUpCursorAdapter();
+        setUpIntent();
 
-        Intent intent = new Intent(this, ClassroomOpenHelper.class);
-        intent.putExtra(STUDENT_ID_KEY, Parcels.wrap(idStudent));
 
         newScanner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -231,6 +225,11 @@ public class ScanBookActivity extends AppCompatActivity {
         cursor = db.getBooks(idStudent);
         customCursorAdapterBooks = new CustomCursorAdapterBooks(this, cursor);
         bookResultsListView.setAdapter(customCursorAdapterBooks);
+    }
+
+    public void setUpIntent() {
+        Intent intent = new Intent(this, ClassroomOpenHelper.class);
+        intent.putExtra(STUDENT_ID_KEY, Parcels.wrap(idStudent));
     }
 
 }
