@@ -15,7 +15,7 @@
     <TextView
         android:padding="5dp"
         android:layout_gravity="center"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/activity_star_text_view_title"
         android:text="@string/i_give_this_book_xml"
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content" />
 
     <RatingBar
-        android:scaleX="0.7"
-        android:scaleY="0.7"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
         android:clickable="true"
         android:layout_gravity="center"
         android:id="@+id/activity_star_rating_bar_stars"
@@ -34,7 +34,7 @@
     <TextView
         android:layout_gravity="center"
         android:id="@+id/activity_star_text_view_stars"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/stars"
         android:paddingBottom="20dp"
@@ -44,7 +44,7 @@
     <TextView
         android:layout_gravity="center"
         android:id="@+id/activity_star_text_view_done"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/done_xml"
         android:layout_width="wrap_content"
