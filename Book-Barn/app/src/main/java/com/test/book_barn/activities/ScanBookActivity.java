@@ -52,11 +52,11 @@ public class ScanBookActivity extends AppCompatActivity {
     static final String SAVE_HISTORY = "SAVE_HISTORY";
     private String baseUrl = "https://www.googleapis.com/books/v1/";
 
-    private TextView  scan;
+    private TextView scan;
     private ImageButton newScanner;
     private String contents, title, author, full, imageUrl;
     private Student student;
-    private Classroom classroom; //adds classroom
+    private Classroom classroom;
     private ClassroomOpenHelper db;
     private Book book;
     private ListView bookResultsListView;
@@ -82,16 +82,16 @@ public class ScanBookActivity extends AppCompatActivity {
 
 
         newScanner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), CaptureActivity.class);
-                intent.setAction(ACTION_SCAN);
-                intent.putExtra(SAVE_HISTORY, true);
-                intent.putExtra(SCAN_MODE, PRODUCT_MODE);
-                startActivityForResult(intent, 0);
+                                          @Override
+                                          public void onClick(View view) {
+                                              Intent intent = new Intent(getApplicationContext(), CaptureActivity.class);
+                                              intent.setAction(ACTION_SCAN);
+                                              intent.putExtra(SAVE_HISTORY, true);
+                                              intent.putExtra(SCAN_MODE, PRODUCT_MODE);
+                                              startActivityForResult(intent, 0);
 
-            }
-           }
+                                          }
+                                      }
         );
 
     }
@@ -106,7 +106,7 @@ public class ScanBookActivity extends AppCompatActivity {
                 dbTask.execute();
                 Intent intent = new Intent(ScanBookActivity.this, SplashAddedBookActivity.class);
                 intent.putExtra(STUDENT_KEY, Parcels.wrap(student));
-                intent.putExtra(CLASSROOM_KEY,Parcels.wrap(classroom));
+                intent.putExtra(CLASSROOM_KEY, Parcels.wrap(classroom));
                 startActivity(intent);
 
             } else if (resultCode == RESULT_CANCELED) {
@@ -158,6 +158,7 @@ public class ScanBookActivity extends AppCompatActivity {
                     try {
                         Log.d("on response", "onResponse: " + response.body().getItems().get(0).getVolumeInfo().getTitle().toString());
                         Log.d("on response", "onResponse: " + response.body().getItems().get(0).getVolumeInfo().getAuthors().get(0).toString());
+                        Log.d("on response", "onResponse: " + response.body().getItems().get(0).getVolumeInfo().getImageLinks().getSmallThumbnail());
 
                         title = response.body().getItems().get(0).getVolumeInfo().getTitle();
                         author = response.body().getItems().get(0).getVolumeInfo().getAuthors().get(0).toString();
@@ -167,6 +168,9 @@ public class ScanBookActivity extends AppCompatActivity {
 
                     } catch (Exception e) {
                         e.printStackTrace();
+                        if(imageUrl == null) {
+                            imageUrl = "http://images.clipartpanda.com/booklet-clipart-open-book-vector-icon_small.jpg";
+                        }
                     }
                 }
 
@@ -190,8 +194,10 @@ public class ScanBookActivity extends AppCompatActivity {
         if (title == null) {
             Toast.makeText(ScanBookActivity.this, R.string.scan_new_book, Toast.LENGTH_LONG).show();
 
-        } else {
+        } else if (imageUrl == null) {
+            Toast.makeText(ScanBookActivity.this, R.string.sorry_cant_find_book, Toast.LENGTH_LONG).show();
 
+    }else {
             book = new Book(title, author, imageUrl, idStudent);
             book.setTitle(title);
             book.setAuthor(author);
@@ -202,11 +208,10 @@ public class ScanBookActivity extends AppCompatActivity {
             student.setBookArrayList(bookArrayList);
             db.addBook(book);
             customCursorAdapterBooks.swapCursor(db.getBooks(idStudent));
-
         }
     }
 
-    public void setUpTextViews(){
+    public void setUpTextViews() {
 
         scan = (TextView) findViewById(R.id.textview_scanner);
         newScanner = (ImageButton) findViewById(R.id.book_scanner_button);
@@ -231,5 +236,5 @@ public class ScanBookActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ClassroomOpenHelper.class);
         intent.putExtra(STUDENT_ID_KEY, Parcels.wrap(idStudent));
     }
-
+    
 }

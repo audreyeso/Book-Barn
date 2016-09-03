@@ -102,4 +102,6 @@
     <string name="give_student_name_toast">Give your student a name.</string>
     <string name="give_class_name_toast">Give your class a name.</string>
     <string name="no">No</string>
+    <string name="sorry_book_not_found">Sorry. We can\'t find that book.</string>
+    <string name="sorry_cant_find_book">Sorry! Can\'t find your book!</string>
 </resources>
