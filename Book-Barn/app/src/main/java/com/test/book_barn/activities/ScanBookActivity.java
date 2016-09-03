@@ -168,7 +168,7 @@ public class ScanBookActivity extends AppCompatActivity {
 
                     } catch (Exception e) {
                         e.printStackTrace();
-                        if(imageUrl == null) {
+                        if (imageUrl == null) {
                             imageUrl = "http://images.clipartpanda.com/booklet-clipart-open-book-vector-icon_small.jpg";
                         }
                     }
@@ -194,10 +194,7 @@ public class ScanBookActivity extends AppCompatActivity {
         if (title == null) {
             Toast.makeText(ScanBookActivity.this, R.string.scan_new_book, Toast.LENGTH_LONG).show();
 
-        } else if (imageUrl == null) {
-            Toast.makeText(ScanBookActivity.this, R.string.sorry_cant_find_book, Toast.LENGTH_LONG).show();
-
-    }else {
+        } else {
             book = new Book(title, author, imageUrl, idStudent);
             book.setTitle(title);
             book.setAuthor(author);
@@ -232,9 +229,13 @@ public class ScanBookActivity extends AppCompatActivity {
         bookResultsListView.setAdapter(customCursorAdapterBooks);
     }
 
+    /**
+     * setup Intent
+     */
+
     public void setUpIntent() {
         Intent intent = new Intent(this, ClassroomOpenHelper.class);
         intent.putExtra(STUDENT_ID_KEY, Parcels.wrap(idStudent));
     }
-    
+
 }
