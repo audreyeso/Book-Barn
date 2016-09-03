@@ -101,4 +101,5 @@
     <string name="home">home</string>
     <string name="give_student_name_toast">Give your student a name.</string>
     <string name="give_class_name_toast">Give your class a name.</string>
+    <string name="no">No</string>
 </resources>

@@ -222,11 +222,13 @@ public class AnswerQuestionActivity extends AppCompatActivity implements View.On
                 drawView.destroyDrawingCache();
             }
         });
-        saveDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+        saveDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
+                startIntentForStarRatingActivity();
             }
         });
+
         saveDialog.show();
 
     }
