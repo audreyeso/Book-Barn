@@ -2,7 +2,6 @@ package com.test.book_barn.adapters;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,7 +64,6 @@ public class CustomCursorAdapter extends CursorAdapter {
                 ClassroomOpenHelper classroomOpenHelper = ClassroomOpenHelper.getInstance(context);
                 classroomOpenHelper.removeStudent(id);
 
-                Log.d("Cursor", "remove student");
                 swapCursor(classroomOpenHelper.getStudents(Long.parseLong(classId)));
             }
         });

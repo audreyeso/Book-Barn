@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'MyBookBarnKey100'
+            keyPassword 'myBookBarnPassword'
+            storeFile file('/Users/audreyeso/Desktop/keystores/Keystores Book Barn.rtf')
+            storePassword 'myBookBarnStorePassword100'
+        }
+    }
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
-
     defaultConfig {
         applicationId "com.test.book_barn"
         minSdkVersion 15
@@ -22,7 +29,7 @@ android {
 apply plugin: 'com.neenbedankt.android-apt'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:design:24.1.1'

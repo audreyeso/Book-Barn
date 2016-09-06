@@ -8,7 +8,6 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -16,8 +15,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.test.book_barn.R;
 import com.google.zxing.client.android.CaptureActivity;
+import com.test.book_barn.R;
 import com.test.book_barn.adapters.CustomCursorAdapterBooks;
 import com.test.book_barn.googleApiModels.Example;
 import com.test.book_barn.helpers.ClassroomOpenHelper;
@@ -156,10 +155,6 @@ public class ScanBookActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Example> call, Response<Example> response) {
                     try {
-                        Log.d("on response", "onResponse: " + response.body().getItems().get(0).getVolumeInfo().getTitle().toString());
-                        Log.d("on response", "onResponse: " + response.body().getItems().get(0).getVolumeInfo().getAuthors().get(0).toString());
-                        Log.d("on response", "onResponse: " + response.body().getItems().get(0).getVolumeInfo().getImageLinks().getSmallThumbnail());
-
                         title = response.body().getItems().get(0).getVolumeInfo().getTitle();
                         author = response.body().getItems().get(0).getVolumeInfo().getAuthors().get(0).toString();
                         imageUrl = response.body().getItems().get(0).getVolumeInfo().getImageLinks().getSmallThumbnail();
