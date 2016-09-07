@@ -63,7 +63,6 @@ public class AddStudentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
             setViewStudentIntent();
-
             }
       });
 
