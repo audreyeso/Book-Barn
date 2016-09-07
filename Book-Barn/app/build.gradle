@@ -1,12 +1,18 @@
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
         config {
-            keyAlias 'MyBookBarnKey100'
-            keyPassword 'myBookBarnPassword'
-            storeFile file('/Users/audreyeso/Desktop/keystores/Keystores Book Barn.rtf')
-            storePassword 'myBookBarnStorePassword100'
+
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+
         }
     }
     compileSdkVersion 24
